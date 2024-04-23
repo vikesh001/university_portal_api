@@ -9,10 +9,14 @@ class data{
 
     // Function to establish database connection
     private function conn() {
-        $host = "mysql.selfmade.ninja";
-        $user = "university";
-        $password = "password";
-        $database = "university_clg";
+        $jsonString = file_get_contents('config.json');
+
+// Decode JSON string
+        $config = json_decode($jsonString, true);
+        $host = $config['host'];
+        $user = $config['user'];
+        $password = $config['password'];
+        $database = $config['database'];
 
         try {
             $connection = new mysqli($host, $user, $password, $database);

@@ -3,7 +3,7 @@
 /vendor/*
 /safe/*
 /config/app.php
-
+config.json
 /tmp/cache/models/*
 !/tmp/cache/models/empty
 /tmp/cache/persistent/*
